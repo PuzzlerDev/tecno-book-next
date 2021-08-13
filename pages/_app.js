@@ -1,10 +1,16 @@
 import '../styles/globals.css';
-import { getStaticProps } from "../lib/api";
+import Layout from "../components/layout";
+import {getStaticProps} from "../lib/api";
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 function MyApp({ Component, pageProps,home }) {
 
-  return <Component {...pageProps} home={home}/>
+  return (
+    <Layout>
+      <Component {...pageProps} home={home}/>
+    </Layout>
+  )
 }
 
 MyApp.getInitialProps = async(ctx) => {

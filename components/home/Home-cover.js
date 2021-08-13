@@ -1,11 +1,10 @@
-import Image from 'next/image';
+import StyledImage from "../Styled-image";
 import Link from 'next/link';
 
 function HomeCover({cover}){
     const {coverTitle,coverBody,coverLink,coverPicture} = cover;
     return(
         <section>
-            
             <article className="container py-5">
                 <div className="row justify-content-beetwen">
                     <div className="col-12 col-lg-4 text-center text-lg-start">
@@ -15,19 +14,20 @@ function HomeCover({cover}){
                         <p className="my-4">
                             {coverBody}
                         </p>
-                        <Link href={coverLink.linkUrl}>{coverLink.linkTitle}</Link>
                         
+                        <Link href="/about" scroll={false}>
+                            <a>{coverLink.linkTitle}</a>
+                        </Link>
                     </div>    
                     <div className="col-12 col-lg-7 py-4">
-                        <Image 
+                        <StyledImage 
                             src={coverPicture.url} 
                             alt={coverPicture.alternativeText}
-                            layout="fill"
+                            layout="responsive"
                         />
                     </div>
                 </div>
             </article>
-            
         </section>
     );
     }

@@ -1,7 +1,7 @@
-import {HomeCover} from "./home";
+import {HomeCover} from "../components/home";
 
 function Home({home}){
-    const [cover] = home.body
+    const [cover] = home.body;
     
     return (
         <main>
