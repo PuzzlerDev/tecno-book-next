@@ -4,21 +4,22 @@ import {getStaticProps} from "../lib/api";
 import 'bootstrap/dist/css/bootstrap.css'
 
 
-function MyApp({ Component, pageProps,home }) {
+function MyApp({ Component, pageProps,home,nav }) {
 
   return (
-    <Layout>
+    <Layout nav={nav}>
       <Component {...pageProps} home={home}/>
     </Layout>
   )
 }
 
 MyApp.getInitialProps = async(ctx) => {
-  const [home,categories] = await Promise.all([getStaticProps("/home-page")],[getStaticProps("/categories")]);
+  const [home,categories,nav] = await Promise.all([getStaticProps("/home-page")],[getStaticProps("/categories")],[getStaticProps("/nav")]);
 
   return {
-    home,categories
+    home,categories,nav
   }
 }
 
-export default MyApp
+
+export default MyApp;

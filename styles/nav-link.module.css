@@ -1,0 +1,13 @@
+@import "./colors.css"; 
+
+.cta-item{
+    background-color: #161D0C;
+    color: #F5F5F5;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.nav-item{
+    color: #F5F5F5;
+}

@@ -1,5 +1,5 @@
-import StyledImage from "../Styled-image";
-import Link from 'next/link';
+import StyledImage from "../styled-image";
+import NavLink from "../nav-link";
 
 function HomeCover({cover}){
     const {coverTitle,coverBody,coverLink,coverPicture} = cover;
@@ -15,9 +15,9 @@ function HomeCover({cover}){
                             {coverBody}
                         </p>
                         
-                        <Link href="/about" scroll={false}>
-                            <a>{coverLink.linkTitle}</a>
-                        </Link>
+                        <NavLink href={coverLink.linkUrl} cta>
+                            {coverLink.linkTitle}
+                        </NavLink>
                     </div>    
                     <div className="col-12 col-lg-7 py-4">
                         <StyledImage 

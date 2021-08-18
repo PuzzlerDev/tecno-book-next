@@ -1,12 +1,11 @@
-import {HomeCover} from "../components/home";
+import {HomeCover,HomeCarrusel} from "../components/home";
 
 function Home({home}){
-    const [cover] = home.body;
-    
     return (
-        <main>
-            <HomeCover cover={cover}/>
-        </main>
+        <>
+            <HomeCover cover={home.body[0]}/>
+            <HomeCarrusel carrusel={home.body[1]}/>
+        </>
     )
 }
 
