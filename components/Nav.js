@@ -1,4 +1,4 @@
-import NavLink from "./nav-link";
+import NavLink from "./Nav-link";
 
 function Nav({nav}){
     console.log(nav)

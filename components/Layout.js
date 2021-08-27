@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import Nav from "./nav";
+import Nav from "./Nav";
 
 function Layout({ children,nav}) {
   return (

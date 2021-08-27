@@ -1,5 +1,5 @@
-import StyledImage from "../styled-image";
-import NavLink from "../nav-link";
+import StyledImage from "../Styled-image";
+import NavLink from "../Nav-link";
 
 function HomeCover({cover}){
     const {coverTitle,coverBody,coverLink,coverPicture} = cover;
@@ -23,7 +23,8 @@ function HomeCover({cover}){
                         <StyledImage 
                             src={coverPicture.url} 
                             alt={coverPicture.alternativeText}
-                            layout="responsive"
+                            width={400}
+                            height={240}
                         />
                     </div>
                 </div>

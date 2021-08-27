@@ -3,5 +3,5 @@ module.exports = {
   images: {
     domains:["localhost"],
   },
-  pageExtensions: ["js"],
+  pageExtensions: ["js","ts"],
 }

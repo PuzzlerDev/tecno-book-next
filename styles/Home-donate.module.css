@@ -1,0 +1,35 @@
+.section-decoration{
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.section-decoration::before{
+    content: '';
+    position: absolute;
+    background-color: red;
+    padding-bottom: 38rem;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    border-radius: 2rem;
+    transform: scaleX(2) rotate(6deg);
+
+}
+
+@media (min-width: 768px) {
+
+    .section-decoration{
+        padding-bottom: 15%;
+    }
+
+    .section-decoration::before{
+        padding-bottom: 30rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .section-decoration{
+        padding-bottom: 5%;
+    }
+}

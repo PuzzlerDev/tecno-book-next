@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
-import Image from "./styled-image";
+import StyledImage from "./Styled-image";
 
 function Carrusel({contens}){
 
@@ -20,11 +20,14 @@ function Carrusel({contens}){
     return contens.id ?(
     <Slider {...settings}>
         {contens.carruselPicture.map(picture => (
-            <Image 
+            <StyledImage 
                 src={picture.url} 
                 alt={picture.alternativeText} 
                 key={picture.id}
+                width={720}
+                height={400}
             />
+
         ))}
     </Slider>
     ):null;
