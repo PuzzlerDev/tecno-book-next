@@ -13,12 +13,17 @@ function StyledImage({src,alt,height,width}){
                 src={process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE + src}
                 quality={100}
                 layout="responsive"
-                width={width ? width : 400}
-                height={height ? height : 480}
+                width={width}
+                height={height}
             />
 
         </div>
     )
-}
+};
+
+StyledImage.defaultProps = {
+    width: 400,
+    height: 480
+};
 
 export default StyledImage;

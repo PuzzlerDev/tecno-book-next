@@ -1,7 +1,7 @@
 import NavLink from "./Nav-link";
 
 function Nav({nav}){
-    console.log(nav)
+    
     return nav ?(
         <header className="row align-items-center px-4">
             <nav className="col-auto">

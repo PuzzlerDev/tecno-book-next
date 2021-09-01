@@ -1,0 +1,10 @@
+.reasons-card{
+    box-shadow: 0 0 10px silver;
+    padding: 2.5% 5%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.reasons-card-text{
+    text-align: justify;
+}

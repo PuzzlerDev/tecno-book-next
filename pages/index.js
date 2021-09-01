@@ -1,4 +1,4 @@
-import {HomeCover,HomeCarrusel,HomeDonate} from "../components/home";
+import {HomeCover,HomeCarrusel,HomeDonate,HomeReasons} from "../components/home";
 
 function Home({home}){
     return (
@@ -6,6 +6,7 @@ function Home({home}){
             <HomeCover cover={home.body[0]}/>
             <HomeCarrusel carrusel={home.body[1]}/>
             <HomeDonate donate={home.body[2]}/>
+            <HomeReasons reasons={home.body[3]}/>
         </>
     )
 }
