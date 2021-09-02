@@ -5,7 +5,7 @@ function Nav({nav}){
     return nav ?(
         <header className="row align-items-center px-4">
             <nav className="col-auto">
-            {response.body.map(item => {
+            {nav.body.map(item => {
                 const {linkTitle, linkUrl, id} = item;
                 return(
                     <NavLink 

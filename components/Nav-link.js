@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import Styles from "../styles/Nav-link.module.css"
 
 const NavLink = ({href,children,className,cta}) => {

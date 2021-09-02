@@ -1,0 +1,6 @@
+.card-name{
+    border-bottom: 5px inset #161D0C;
+    border-radius: 5px;
+    padding: 0.5rem 1.1rem;
+    display: inline-block;
+}
