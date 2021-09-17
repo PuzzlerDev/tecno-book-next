@@ -1,8 +1,7 @@
 import NavLink from "./Nav-link";
 
 function Nav({nav}){
-    
-    return nav ?(
+    return nav?.id ?(
         <header className="row align-items-center px-4">
             <nav className="col-auto">
             {nav.body.map(item => {

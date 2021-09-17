@@ -11,8 +11,7 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    border-radius: 2rem;
-    transform: scaleX(2.5) rotate(6deg);
+    transform: scaleX(1.5);
 
 }
 
@@ -22,7 +21,6 @@
 }
 
 @media (min-width: 768px) {
-
 
     .section-decoration::before{
         padding-bottom: 25rem;

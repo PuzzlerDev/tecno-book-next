@@ -1,0 +1,13 @@
+.loading{
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  height: 3em;
+  left: 45%;
+}
+
+@media (min-width: 576px) {
+  .loading{
+      left: 50%;
+  }
+}

@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf2f2 !important;
@@ -13,6 +13,10 @@ body {
 
 a {
   text-decoration: none !important;
+}
+
+a:hover {
+  color: initial !important;
 }
 
 * {
