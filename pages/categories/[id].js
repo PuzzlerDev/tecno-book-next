@@ -1,23 +1,26 @@
-import { getServerSideProps } from '../../lib/api';
-import { CategoryCover } from "../../components/category-page";
+import { CategoryCover, CategoryBooks } from "../../components/category-page";
 
 const Category = ({category}) => {
-  console.log(category)
-  return(
+  return category?.id?(
     <>
-      <CategoryCover />
+      <CategoryCover category={category} />
+      <CategoryBooks books={category.books} />
     </>
-  )    
+  ): null;    
 };
 
 
-Category.getInitialProps = async(ctx) => {
-  const category = await getServerSideProps(`categories/1`);
-  console.log(ctx)
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  const res = await fetch(process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE + context.resolvedUrl)
+  const category = await res.json()
 
+  // Pass data to the page via props
   return {
-    category
-  }
-}
+    props: {
+      category
+    }
+  };
+};
 
 export default Category; 

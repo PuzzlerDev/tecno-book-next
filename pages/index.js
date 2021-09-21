@@ -1,6 +1,6 @@
 import {HomeCover,HomeCarrusel,HomeDonate,HomeReasons} from "../components/home";
 
-function Home({home}){
+const Home = ({home}) => {
     return (
         <>
             <HomeCover cover={home.body[0]}/>
