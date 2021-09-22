@@ -1,6 +1,6 @@
 @import "./colors.css"; 
 
-.cta-item{
+.cta-item-black, .cta-item-green{
     background-color: #161D0C;
     color: #F5F5F5;
     text-decoration: none;
@@ -8,6 +8,15 @@
     border-radius: 10px;
 }
 
-.nav-item{
+.cta-item-green{
+    background-color: #97BC86;
+    color:#161D0C;
+}
+
+.nav-item-black{
+    color: #161D0C;
+}
+
+.nav-item-white{
     color: #F5F5F5;
 }

@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import {getStaticProps} from "../lib/api";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function MyApp({ Component, pageProps,home,nav,categories }) {
+const MyApp= ({ Component, pageProps,home,nav,categories }) => {
   return (
     <Layout nav={nav}>
       <Component {...pageProps} home={home} categories={categories}/>

@@ -10,12 +10,11 @@ const CategoryBooks = ({books}) => {
             const {id, bookTitle, bookPicture} = book;
             return(
                 <div key={id} className="col-12 col-md-6 col-lg-4">
-                    <NavLink href={`/books/${id}`}>
+                    <NavLink href={`/books/${id}`} color="black">
                     <h3 className="text-center">{bookTitle}</h3>
                     <StyledImage 
                       src={bookPicture.url} 
                       alt={bookPicture.alternativeText}
-                      height={300} 
                     />
                     </NavLink>
                 </div>

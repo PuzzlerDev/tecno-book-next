@@ -23,7 +23,7 @@ function StyledImage({src,alt,height,width}){
 
 StyledImage.defaultProps = {
     width: 400,
-    height: 480
+    height: 300
 };
 
 export default StyledImage;

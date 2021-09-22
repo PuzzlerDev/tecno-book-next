@@ -16,7 +16,12 @@ const HomeDonate = ({donate}) => {
                 <div className={`col-12 col-md-6 ${Styles["z-col"]}`}>
                     <h2>{donate.donateTitle}</h2>
                     <p className="mb-4">{donate.donateInfo}</p>
-                    <NavLink href={donate.donateUrl} cta>APOYANOS $</NavLink>
+                    <NavLink 
+                      href={donate.donateUrl} 
+                      cta
+                      bg="green"
+                      >APOYANOS $
+                    </NavLink>
                 </div>
             </div>
         </section>

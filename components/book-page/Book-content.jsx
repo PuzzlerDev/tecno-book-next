@@ -1,4 +1,5 @@
 import StyledImage from "../Styled-image";
+import NavLink from "../Nav-link";
 
 const BookContent = ({book}) => {
 
@@ -20,21 +21,21 @@ const BookContent = ({book}) => {
                            {book.bookInfo}
                        </p>
                        {book.bookSpanishLink && (
-                        <a href={book.bookSpanishLink} target="_blank">
+                        <NavLink href={book.bookSpanishLink} target="_blank" cta>
                         Descarga en Espanol
                         {console.log(book.bookSpanishLink)}
-                        </a>
+                        </NavLink>
                        )}
                        {book.bookEnglishLink && (
-                        <a href={book.bookEnglishLink} target="_blank">
-                        Descarga en Ingles
-                        </a>
+                        <NavLink href={book.bookEnglishLink} target="_blank" cta>
+                            Download PDF
+                        </NavLink>
                        )}
                     </div>
                 </div>
             </article>
         </section>
-    ):<h1>Loading</h1>    
+    ):null; 
 };
 
 export default BookContent;
