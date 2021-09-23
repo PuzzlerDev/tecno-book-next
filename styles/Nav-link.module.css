@@ -1,22 +1,40 @@
-@import "./colors.css"; 
+@import "./colors.css";
 
-.cta-item-black, .cta-item-green{
-    background-color: #161D0C;
-    color: #F5F5F5;
-    text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 10px;
+/* ---- cta items ----  */
+.cta-item-black,
+.cta-item-green {
+  background-color: #161D0C;
+  color: #F5F5F5;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
 }
 
-.cta-item-green{
-    background-color: #97BC86;
-    color:#161D0C;
+.cta-item-green {
+  background-color: #97BC86;
+  color: #161D0C;
 }
 
-.nav-item-black{
-    color: #161D0C;
+.cta-item-black:hover {
+  color: #F5F5F5;
+}
+.cta-item-green:hover {
+  color: #161D0C;
 }
 
-.nav-item-white{
-    color: #F5F5F5;
+/* ----- nav items ---- */
+.nav-item-black {
+  color: #161D0C;
+}
+
+.nav-item-black:hover {
+  color: #F5F5F5;
+}
+
+.nav-item-white {
+  color: #F5F5F5;
+}
+
+.nav-item-white:hover {
+  color: #161D0C;
 }

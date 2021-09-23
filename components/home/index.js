@@ -1,8 +1,6 @@
-import HomeCover from "./Home-cover";
-import HomeCarrusel from "./Home-carrusel";
-import HomeDonate from "./Home-donate";
-import HomeReasons from "./Home-reasons";
+import HomeCover from "./home-cover";
+import HomeCarrusel from "./home-carrusel";
+import HomeDonate from "./home-donate";
+import HomeReasons from "./home-reasons";
 
-export {
-    HomeCover,HomeCarrusel, HomeDonate, HomeReasons
-};
+export { HomeCover, HomeCarrusel, HomeDonate, HomeReasons };

@@ -7,7 +7,7 @@ const notFound = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default notFound;

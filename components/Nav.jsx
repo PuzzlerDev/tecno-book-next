@@ -1,27 +1,23 @@
-import NavLink from "./Nav-link";
+import NavLink from "./nav-link";
 
-function Nav({nav}){
-    return nav?.id ?(
-        <header className="row align-items-center px-4">
-            <nav className="col-auto">
-            {nav.body.map(item => {
-                const {linkTitle, linkUrl, id} = item;
-                return(
-                    <NavLink 
-                        href={linkUrl} 
-                        className="mx-2 text-white"
-                        key={id}
-                    >  
-                        {linkTitle}
-                    </NavLink>
-                )
-                })}    
-            </nav>
-            <div className="col-auto">
-                <input type="text" placeholder="Busca un libro..." role="search"/>
-            </div>
-        </header>
-    ): null
+const Nav = ({ nav }) => {
+  return nav?.id ? (
+    <header className="row align-items-center px-4">
+      <nav className="col-auto">
+        {nav.body.map((item) => {
+          const { linkTitle, linkUrl, id } = item;
+          return (
+            <NavLink href={linkUrl} className="mx-2 text-white" key={id}>
+              {linkTitle}
+            </NavLink>
+          );
+        })}
+      </nav>
+      <div className="col-auto">
+        <input type="text" placeholder="Busca un libro..." role="search" />
+      </div>
+    </header>
+  ) : null;
 };
 
 /*

@@ -1,3 +1,3 @@
-import CategoriesContent from "./Categories-content";
+import CategoriesContent from "./categories-content";
 
 export { CategoriesContent };

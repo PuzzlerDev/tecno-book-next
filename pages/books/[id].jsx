@@ -1,27 +1,28 @@
 import { BookContent } from "../../components/book-page";
 import { API_URL } from "../../helpers/constants";
-import Loading from "../../components/Loading";
+import Loading from "../../components/loading";
 
 const Book = ({ book }) => {
-  return book?.id?(
+  return book?.id ? (
     <>
       <BookContent book={book} />
     </>
-  ): <Loading/>;    
+  ) : (
+    <Loading />
+  );
 };
 
-
-export async function getServerSideProps(context) {
+export const getServerSideProps = async (context) => {
   // Fetch data from external API
-  const res = await fetch(API_URL + context.resolvedUrl)
-  const book = await res.json()
+  const res = await fetch(API_URL + context.resolvedUrl);
+  const book = await res.json();
 
   // Pass data to the page via props
   return {
     props: {
-      book
-    }
+      book,
+    },
   };
 };
 
-export default Book; 
+export default Book;

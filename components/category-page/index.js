@@ -1,5 +1,5 @@
-import CategoryCover from "./Category-cover";
-import CategoryBooks from "./Category-books";
+import CategoryCover from "./category-cover";
+import CategoryBooks from "./category-books";
 
 export {
   CategoryCover, CategoryBooks

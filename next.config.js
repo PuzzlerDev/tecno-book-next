@@ -3,5 +3,8 @@ module.exports = {
   images: {
     domains:["localhost"],
   },
-  pageExtensions: ["js","ts"],
+  pageExtensions: ['js','ts','jsx'],
+  eslint: {
+    dirs: ['pages', 'helpers', 'lib', 'components'],
+  }
 }

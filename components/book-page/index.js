@@ -1,3 +1,3 @@
-import BookContent from "./Book-content";
+import BookContent from "./book-content";
 
 export { BookContent };
