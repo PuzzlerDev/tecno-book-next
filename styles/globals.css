@@ -15,10 +15,6 @@ a {
   text-decoration: none !important;
 }
 
-a:hover {
-  color: initial !important;
-}
-
 * {
   box-sizing: border-box;
 }
