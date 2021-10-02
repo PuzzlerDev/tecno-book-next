@@ -1,6 +1,6 @@
-import NavLink from "../Nav-link";
-import StyledImage from "../Styled-image";
-import Styles from "../../styles/home-styles/Home-donate.module.css";
+import NavLink from "../nav-link";
+import StyledImage from "../styled-image";
+import Styles from "../../styles/home-styles/home-donate.module.css";
 
 const HomeDonate = ({ donate }) => {
   return donate ? (

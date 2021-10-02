@@ -1,7 +1,7 @@
-import StyledImage from "../Styled-image";
-import NavLink from "../Nav-link";
-import Styles from "../../styles/categories-styles/Categories-content.module.css";
-import Loading from "../Loading";
+import StyledImage from "../styled-image";
+import NavLink from "../nav-link";
+import Styles from "../../styles/categories-styles/categories-content.module.css";
+import Loading from "../loading";
 
 const CategoriesContent = ({ categories }) => {
   const contents = Object.values(categories);
