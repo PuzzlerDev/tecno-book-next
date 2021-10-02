@@ -1,8 +1,9 @@
-import NavLink from "./nav-link";
+import NavLink from "./Nav-link";
+// import Styles from "../styles/Nav.css";
 
 const Nav = ({ nav }) => {
   return nav?.id ? (
-    <header className="row align-items-center px-4">
+    <header className="navbar navbar-dark bg-dark row align-items-center px-4">
       <nav className="col-auto">
         {nav.body.map((item) => {
           const { linkTitle, linkUrl, id } = item;
@@ -30,7 +31,7 @@ const Header = styled.header`
         display: flex;
     }
 `;
-*/
+
 /*
 const InputBox = styled.div`
     margin-left: auto;

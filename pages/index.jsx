@@ -4,7 +4,7 @@ import {
   HomeDonate,
   HomeReasons,
 } from "../components/home";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 const Home = ({ home }) => {
   return home?.id ? (

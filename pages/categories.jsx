@@ -1,5 +1,5 @@
 import { CategoriesContent } from "../components/categories-page";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 const Categories = ({ categories }) => {
   console.log(categories);

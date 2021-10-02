@@ -1,5 +1,5 @@
-import NavLink from "../nav-link";
-import StyledImage from "../styled-image";
+import NavLink from "../Nav-link";
+import StyledImage from "../Styled-image";
 
 const CategoryBooks = ({ books }) => {
   return books ? (
