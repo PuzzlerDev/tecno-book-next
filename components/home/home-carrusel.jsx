@@ -1,4 +1,4 @@
-import Carrusel from "../Carrusel";
+import Carrusel from "../carrusel";
 
 const HomeCarrusel = ({ carrusel }) => {
   return carrusel ? (

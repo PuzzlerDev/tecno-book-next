@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Styles from "../styles/Nav-link.module.css";
+import Styles from "../styles/nav-link.module.css";
 
 const NavLink = ({ href, children, cta, color = "white", bg = "black" }) => {
   return (

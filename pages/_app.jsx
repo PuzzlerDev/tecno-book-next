@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { getStaticProps } from "../lib/api";
 import "bootstrap/dist/css/bootstrap.css";
 

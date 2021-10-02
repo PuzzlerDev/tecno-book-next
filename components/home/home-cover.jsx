@@ -1,5 +1,5 @@
-import StyledImage from "../Styled-image";
-import NavLink from "../Nav-link";
+import StyledImage from "../styled-image";
+import NavLink from "../nav-link";
 
 const HomeCover = ({ cover }) => {
   const { coverTitle, coverBody, coverLink, coverPicture } = cover;

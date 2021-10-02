@@ -1,5 +1,5 @@
-import NavLink from "./Nav-link";
-// import Styles from "../styles/Nav.css";
+import NavLink from "./nav-link";
+// import Styles from "../styles/nav.css";
 
 const Nav = ({ nav }) => {
   return nav?.id ? (

@@ -1,5 +1,5 @@
-import StyledImage from "../Styled-image";
-import Styles from "../../styles/home-styles/Home-reasons.module.css";
+import StyledImage from "../styled-image";
+import Styles from "../../styles/home-styles/home-reasons.module.css";
 
 const HomeReasons = ({ reasons: data }) => {
   return data ? (
