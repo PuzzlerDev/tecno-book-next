@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { API_URL } from "../helpers/constants";
 
 const Loader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;
@@ -11,7 +10,7 @@ const StyledImage = ({ src, alt, height, width }) => {
       <Image
         loader={Loader}
         alt={alt}
-        src={API_URL + src}
+        src={src}
         quality={100}
         layout="responsive"
         width={width}
