@@ -1,6 +1,6 @@
 import StyledImage from "../styled-image";
 import NavLink from "../nav-link";
-import Styles from "../../styles/categories-styles/Categories-content.module.css";
+import Styles from "../../styles/categories-styles/categories-content.module.css";
 import Loading from "../loading";
 
 const CategoriesContent = ({ categories }) => {
