@@ -1,10 +1,10 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains:["localhost"],
+    domains:["localhost", "cloudinary"],
   },
-  pageExtensions: ['js','ts','jsx'],
+  pageExtensions: ["js","ts","jsx"],
   eslint: {
-    dirs: ['pages', 'helpers', 'lib', 'components'],
+    dirs: ["pages", "helpers", "lib", "components"],
   }
 }
