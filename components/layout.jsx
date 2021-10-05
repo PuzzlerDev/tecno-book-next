@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Technology Book" key="title" />
       </Head>
-      <Nav/>
+      <Nav />
       <main>{children}</main>
       <Footer />
     </>

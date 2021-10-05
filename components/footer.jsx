@@ -1,44 +1,52 @@
 import StyledImage from "./styled-image";
+import NavLink from "./nav-link";
 
 const Footer = () => {
   return (
-    <footer className="navbar navbar-dark bg-dark row align-items-center px-4">
-      <section className="col-auto">
-        <div className="mx-2 text-white">
-          <StyledImage src="/powered-by-vercel.svg" alt="Vercel Logo" width={400}/>
-        </div>
-        <div className="mx-2 text-white">
-          <img src="/puzzlerdev-logo.svg" alt="PuzzlerDev Logo" />
-        </div>
-      </section>
-      <section className="col-auto">
+    <footer className="bg-dark row align-items-center justify-content-between px-4">
+      <div className="col-2">
+        <StyledImage 
+          src='/powered-by-vercel.svg' 
+          alt="Vercel Logo" 
+          width={50} 
+          height={50}
+        />
+
+        <StyledImage 
+          src='/puzzlerdev-logo.png' 
+          alt="Vercel Logo" 
+          width={50} 
+          height={50}
+        />
+      </div>
+      <div className="col-auto">
         <p className="mx-2 text-white">
           <span>Reach me:</span>
         </p>
         <ul className="mx-2 text-white">
           <li>
-            <a href="/">GitHub</a>
+            <NavLink href="/">GitHub</NavLink>
           </li>
           <li>
-            <a href="/">Twitter</a>
+            <NavLink href="/">Twitter</NavLink>
           </li>
           <li>
-            <a href="/">Instagram</a>
+            <NavLink href="/">Instagram</NavLink>
           </li>
           <li>
-            <a href="/">TikTok</a>
+            <NavLink href="/">TikTok</NavLink>
           </li>
           <li>
-            <a href="/">Discord</a>
+            <NavLink href="/">Discord</NavLink>
           </li>
           <li>
-            <a href="/">Telegram</a>
+            <NavLink href="/">Telegram</NavLink>
           </li>
           <li>
-            <a href="/">YouTube</a>
+            <NavLink href="/">YouTube</NavLink>
           </li>
         </ul>
-      </section>
+      </div>
     </footer>
   );
 };
