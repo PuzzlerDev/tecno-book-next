@@ -3,25 +3,23 @@ import Layout from "../components/layout";
 import { getStaticProps } from "../lib/api";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MyApp = ({ Component, pageProps, home, nav, categories }) => {
+const MyApp = ({ Component, pageProps, home, categories }) => {
   return (
-    <Layout nav={nav}>
+    <Layout>
       <Component {...pageProps} home={home} categories={categories} />
     </Layout>
   );
 };
 
 MyApp.getInitialProps = async (ctx) => {
-  const [home, categories, nav] = await Promise.all([
+  const [home, categories] = await Promise.all([
     getStaticProps("/home-page"),
     getStaticProps("/categories"),
-    getStaticProps("/nav"),
   ]);
 
   return {
     home,
     categories,
-    nav,
   };
 };
 

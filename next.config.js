@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     loader: "cloudinary",
-    domains: ["localhost", "res.cloudinary.com"],
+    domains: ["res.cloudinary.com", "localhost"],
   },
   pageExtensions: ["js","ts","jsx"],
   eslint: {

@@ -1,24 +1,33 @@
 import NavLink from "./nav-link";
-// import Styles from "../styles/nav.css";
+import Styles from "../styles/nav.module.css";
 
-const Nav = ({ nav }) => {
-  return nav?.id ? (
+const Nav = () => {
+  return (
     <header className="navbar navbar-dark bg-dark row align-items-center px-4">
       <nav className="col-auto">
-        {nav.body.map((item) => {
-          const { linkTitle, linkUrl, id } = item;
-          return (
-            <NavLink href={linkUrl} className="mx-2 text-white" key={id}>
-              {linkTitle}
+        <ul className={`${Styles['nav-ul']} row`}>
+          <li className="col-auto">
+            <NavLink href="/" className="text-white">
+              HOME
             </NavLink>
-          );
-        })}
+          </li>
+          <li className="col">
+            <NavLink href="/categories" className="text-white">
+              CATEGORIES
+            </NavLink>
+          </li>
+          <li className="col">
+            <NavLink href="/" className="text-white">
+              CONTRIBUTE
+            </NavLink>
+          </li>
+        </ul>
       </nav>
       <div className="col-auto">
-        <input type="text" placeholder="Busca un libro..." role="search" />
+        <input type="text" placeholder="Search a book..." role="search" />
       </div>
     </header>
-  ) : null;
+  );
 };
 
 /*

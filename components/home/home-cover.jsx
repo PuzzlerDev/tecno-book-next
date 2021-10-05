@@ -22,6 +22,7 @@ const HomeCover = ({ cover }) => {
               width={400}
               height={240}
               loading='eager'
+              priority={true}
             />
           </div>
         </div>
