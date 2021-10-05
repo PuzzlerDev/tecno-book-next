@@ -1,9 +1,11 @@
+import StyledImage from "./styled-image";
+
 const Footer = () => {
   return (
     <footer className="navbar navbar-dark bg-dark row align-items-center px-4">
       <section className="col-auto">
         <div className="mx-2 text-white">
-          <img src="/vercel-logo.svg" alt="Vercel Logo" />
+          <StyledImage src="/powered-by-vercel.svg" alt="Vercel Logo" width={400}/>
         </div>
         <div className="mx-2 text-white">
           <img src="/puzzlerdev-logo.svg" alt="PuzzlerDev Logo" />
