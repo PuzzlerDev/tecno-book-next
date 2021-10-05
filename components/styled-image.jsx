@@ -4,7 +4,7 @@ const Loader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;
 };
 
-const StyledImage = ({ src, alt, height, width }) => {
+const StyledImage = ({ src, alt, height, width, loading }) => {
   return (
     <div>
       <Image
@@ -15,6 +15,7 @@ const StyledImage = ({ src, alt, height, width }) => {
         layout="responsive"
         width={width}
         height={height}
+        loading={loading}
       />
     </div>
   );
@@ -23,6 +24,7 @@ const StyledImage = ({ src, alt, height, width }) => {
 StyledImage.defaultProps = {
   width: 400,
   height: 300,
+  loading: 'lazy'
 };
 
 export default StyledImage;

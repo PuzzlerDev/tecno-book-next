@@ -4,7 +4,7 @@ import Footer from "./footer";
 
 const Layout = ({ children, nav }) => {
   return (
-    <html lang="en">
+    <>
       <Head>
         <title>Tecno Book</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -13,7 +13,7 @@ const Layout = ({ children, nav }) => {
       <Nav nav={nav} />
       <main>{children}</main>
       <Footer />
-    </html>
+    </>
   );
 };
 

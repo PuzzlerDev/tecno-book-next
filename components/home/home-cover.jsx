@@ -21,6 +21,7 @@ const HomeCover = ({ cover }) => {
               alt={coverPicture.alternativeText}
               width={400}
               height={240}
+              loading='eager'
             />
           </div>
         </div>
