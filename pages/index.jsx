@@ -5,6 +5,7 @@ import {
   HomeReasons,
 } from "../components/home";
 import Loading from "../components/loading";
+import { API_URL } from "../helpers/constants";
 
 const Home = ({ home }) => {
   return home?.id ? (
@@ -18,5 +19,22 @@ const Home = ({ home }) => {
     <Loading />
   );
 };
+
+
+export async function getStaticProps() {
+  const res = await fetch(`${API_URL}/home-page`);
+  const home = await res.json();
+
+  if (!home) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { home }
+  }
+}
+
 
 export default Home;

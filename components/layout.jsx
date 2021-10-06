@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
         <meta property="og:title" content="Technology Book" key="title" />
       </Head>
       <Nav />
-      <main>{children}</main>
+      <main>
+        {children}
+      </main>
       <Footer />
     </>
   );
