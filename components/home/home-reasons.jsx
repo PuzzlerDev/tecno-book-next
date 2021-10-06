@@ -14,7 +14,7 @@ const HomeReasons = ({ reasons: data }) => {
                   <StyledImage
                     src={reasonPicture.url}
                     alt={reasonPicture.alternativeText}
-                    width={40}
+                    width={25}
                     height={20}
                   />
                   <hr />
