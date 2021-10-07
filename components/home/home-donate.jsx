@@ -17,7 +17,7 @@ const HomeDonate = ({ donate }) => {
           <h2>{donate.donateTitle}</h2>
           <p className="mb-4">{donate.donateInfo}</p>
           <NavLink href={donate.donateUrl} cta bg="green">
-            APOYANOS $
+            APOYANOS
           </NavLink>
         </div>
       </div>
