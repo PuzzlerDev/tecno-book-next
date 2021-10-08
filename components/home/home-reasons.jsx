@@ -3,8 +3,7 @@ import Styles from "../../styles/home-styles/home-reasons.module.css";
 
 const HomeReasons = ({ reasons: data }) => {
   return data ? (
-    <section>
-      <article className="container py-5">
+    <section className="container py-5 mt-5">
         <h2 className="text-center my-5">{data.reasonTitle}</h2>
         <div className="row justify-content-around">
           {data.reasons.map((item) => {
@@ -15,8 +14,8 @@ const HomeReasons = ({ reasons: data }) => {
                   <StyledImage
                     src={reasonPicture.url}
                     alt={reasonPicture.alternativeText}
-                    width={200}
-                    height={150}
+                    width={25}
+                    height={20}
                   />
                   <hr />
                   <p className={Styles["reasons-card-text"]}>{reasonInfo}</p>
@@ -25,7 +24,6 @@ const HomeReasons = ({ reasons: data }) => {
             );
           })}
         </div>
-      </article>
     </section>
   ) : null;
 };

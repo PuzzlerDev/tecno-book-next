@@ -4,7 +4,7 @@ import Styles from "../../styles/home-styles/home-donate.module.css";
 
 const HomeDonate = ({ donate }) => {
   return donate ? (
-    <section className={`container py-5 ${Styles["section-decoration"]}`}>
+    <section className={`container py-5 ${Styles["section-decoration"]} pb-5`}>
       <div className="row justify-content-center align-items-center">
         <div className={`col-12 col-md-6 z-2 ${Styles["z-col"]}`}>
           <StyledImage
@@ -17,7 +17,7 @@ const HomeDonate = ({ donate }) => {
           <h2>{donate.donateTitle}</h2>
           <p className="mb-4">{donate.donateInfo}</p>
           <NavLink href={donate.donateUrl} cta bg="green">
-            APOYANOS $
+            APOYANOS
           </NavLink>
         </div>
       </div>

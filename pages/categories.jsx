@@ -3,7 +3,6 @@ import Loading from "../components/loading";
 import { API_URL } from "../helpers/constants";
 
 const Categories = ({ categories }) => {
-  console.log(categories);
   return categories?.length ? (
     <>
       <CategoriesContent categories={categories} />
