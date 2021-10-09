@@ -9,6 +9,7 @@ const HomeDonate = ({ donate }) => {
         <div className={`col-12 col-md-6 z-2 ${Styles["z-col"]}`}>
           <StyledImage
             src={donate.donatePicture.url}
+            alt={donate.donatePicture.alternativeText}
             width={400}
             height={200}
           />

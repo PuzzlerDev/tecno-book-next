@@ -9,15 +9,15 @@ const Footer = () => {
         <StyledImage
           src="/puzzlerdev-logo.png"
           alt="Vercel Logo"
-          width={50}
-          height={50}
+          width={64}
+          height={64}
         />
 
         <StyledImage
           src="/powered-by-vercel.svg"
           alt="Vercel Logo"
-          width={50}
-          height={50}
+          width={64}
+          height={16}
         />
       </div>
       <div className="col-auto footer-item">
