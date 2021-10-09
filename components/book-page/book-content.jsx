@@ -7,7 +7,12 @@ const BookContent = ({ book }) => {
       <article className="container p-3">
         <div className="row align-items-center">
           <div className="col-12 col-md-6 ">
-            {book.bookPicture && <StyledImage src={book.bookPicture.url} />}
+            {book.bookPicture && (
+              <StyledImage 
+                src={book.bookPicture.url} 
+                alt={book.bookPicture.alternativeText}
+              />)
+            }
           </div>
 
           <div className="col-12 col-md-6 text-center text-md-start">

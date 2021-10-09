@@ -14,7 +14,7 @@ const Footer = () => {
 
         <StyledImage 
           src='/puzzlerdev-logo.png' 
-          alt="Vercel Logo" 
+          alt="PuzzlerDev Logo" 
           width={50} 
           height={50}
         />
