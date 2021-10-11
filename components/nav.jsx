@@ -8,17 +8,17 @@ const Nav = () => {
         <ul className={`${Styles['nav-ul']} row`}>
           <li className="col-auto">
             <NavLink href="/" className="text-white">
-              HOME
+              INICIO
             </NavLink>
           </li>
           <li className="col">
             <NavLink href="/categories" className="text-white">
-              CATEGORIES
+              CATEGORIAS
             </NavLink>
           </li>
           <li className="col">
             <NavLink href="/" className="text-white">
-              CONTRIBUTE
+              CONTRIBUIR
             </NavLink>
           </li>
         </ul>
