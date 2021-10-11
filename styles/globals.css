@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: "Oswald", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf2f2 !important;
@@ -13,11 +13,16 @@ a {
   text-decoration: none !important;
 }
 
+a:hover {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
 * {
   box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

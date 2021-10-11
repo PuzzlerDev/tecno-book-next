@@ -35,4 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Sponsor:
 
-![Powered by vercel](public/powered-by-vercel.svg)
+[![Powered by vercel](public/powered-by-vercel.svg)](https://vercel.com/puzzlerdev?utm_source=Puzzlerdev&utm_campaign=oss)
