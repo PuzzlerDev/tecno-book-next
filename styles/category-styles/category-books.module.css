@@ -1,3 +1,11 @@
 .book-card {
-  max-width: 15rem;
+  max-width: 17rem;
+  max-height: 25rem;
+  height: 25rem;
+}
+
+.book-link {
+  position: absolute;
+  top: 80%;
+  right: 10%;
 }

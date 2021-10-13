@@ -5,20 +5,30 @@ const NavLink = ({
   href,
   children,
   cta,
-  color = "white",
-  bg = "black",
-  targetBlank = false,
+  color,
+  bg,
+  className,
+  target,
 }) => {
   return (
     <Link href={href} scroll={false}>
       <a
-        className={Styles[cta ? `cta-item-${bg}` : `nav-item-${color}`]}
-        target={targetBlank && "_blank"}
+        className={`
+          ${className} 
+          ${Styles[cta ? `cta-item-${bg}` : `nav-item-${color}`]}
+        `}
+        target={target}
       >
         {children}
       </a>
     </Link>
   );
+};
+
+NavLink.defaultProps = {
+  color: "white",
+  bg: "black",
+  target: "_self"
 };
 
 export default NavLink;
