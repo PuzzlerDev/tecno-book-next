@@ -18,10 +18,10 @@ class MyDocument extends Document {
       <Html lang="es">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet" as="font" />
           <meta property="og:title" content="TechBook" key="title" />
+          <meta charset="utf-8"/>
           <meta name="robots" content="follow, index" />
           <meta name="description" content={meta.description} />
           <meta property="og:site_name" content={meta.title} />

@@ -7,9 +7,9 @@ const CategoriesContent = ({ categories }) => {
   const contents = Object.values(categories);
 
   return contents.length ? (
-    <section>
-      <article className="container pb-5">
+    <section className="container py-5">
         <div className="row justify-content-center">
+          <h1 className="text-center mb-4">CATEGORIAS</h1>
           {contents.map((item) => {
             const { categoryPicture, categoryTitle, id } = item;
             return (
@@ -27,7 +27,6 @@ const CategoriesContent = ({ categories }) => {
             );
           })}
         </div>
-      </article>
     </section>
   ) : (
     <Loading />
