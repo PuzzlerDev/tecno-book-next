@@ -9,11 +9,24 @@ const Category = ({ category }) => {
   ) : null;
 };
 
-export const getServerSideProps = async (context) => {
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/categories/`);
+  const data = await res.json();
+  const paths = data.map(category => {
+    return {
+      params: {id: category.id.toString() }
+    }
+  });
+
+  return {
+    paths,
+    fallback: true,
+  }
+}
+
+export const getStaticProps = async ({ params }) => {
   // Fetch data from external API
-  const res = await fetch(
-    process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE + context.resolvedUrl
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/categories/${params.id}`);
   const category = await res.json();
 
   // Pass data to the page via props
