@@ -4,7 +4,7 @@ import NavLink from "../nav-link";
 const HomeCover = ({ cover }) => {
   const { coverTitle, coverBody, coverLink, coverPicture } = cover;
   return (
-    <section>
+    <section id="home">
       <article className="container py-5">
         <div className="row justify-content-beetwen">
           <div className="col-12 col-lg-4 text-center text-lg-start">
