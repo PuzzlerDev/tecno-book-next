@@ -1,6 +1,7 @@
 import NavLink from "./nav-link";
 import Styles from "../styles/nav.module.css";
-import {InputGroup, Button, FormControl, Row, Col } from "react-bootstrap";
+import {Row, Col } from "react-bootstrap";
+import Search from "./search";
 
 const Nav = () => {
   return (
@@ -25,16 +26,7 @@ const Nav = () => {
         </Row>
       </Col>
       <Col xs="auto" className={`mt-3 ${Styles["nav-col-search"]}`}>
-        <InputGroup className="mb-3">
-          <Button variant="dark" id="button-addon1">
-            Search
-          </Button>
-          <FormControl
-            aria-label="Example text with button addon"
-            aria-describedby="basic-addon1"
-            placeholder="Buscar Libro..."
-          />
-        </InputGroup>
+        <Search />
       </Col>
     </Row>
   );
