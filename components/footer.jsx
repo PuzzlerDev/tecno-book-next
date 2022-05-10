@@ -1,68 +1,61 @@
 import StyledImage from "./styled-image";
 import NavLink from "./nav-link";
 import "../styles/components/footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, faGithub, faInstagram, faTelegram, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { Col, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark row align-items-center justify-content-between px-4">
-      <div className="col-2 footer-item">
+    <footer className="bg-dark row align-items-center px-4 justify-content-between">
+      <Col xs="12" sm="6" lg="3" xxl="2" className="footer-item">
+      <NavLink href="/#home">
         <StyledImage
           src="/puzzlerdev-logo.png"
-          alt="Vercel Logo"
+          alt="PuzzlerDev Logo"
           width={64}
           height={64}
         />
-
+      </NavLink>
+      <NavLink target="_blank" href="https://vercel.com/">
         <StyledImage
           src="/powered-by-vercel.svg"
           alt="Vercel Logo"
           width={64}
           height={16}
         />
-      </div>
-      <div className="col-auto footer-item">
-        <p className="mx-2 text-white">Reach me</p>
-        <ul className="mx-2 text-white">
-          <li>
-            <NavLink targetBlank href="https://github.com/PuzzlerDev">
-              GitHub
+
+      </NavLink>
+      </Col>
+      <Col xs="12" sm="6" xl="4" className="footer-item mx-auto mt-4">
+        <Row className="mx-auto text-white list-unstyled" as="ul">
+          <Col as="li" xs="3"  md="2" lg="2" className="mb-3">
+            <NavLink href="https://github.com/PuzzlerDev">
+            <FontAwesomeIcon className="fa-2x" icon={faGithub} />
             </NavLink>
-          </li>
-          <li>
-            <NavLink targetBlank href="https://www.instagram.com/puzzlerdev">
-              Twitter
+          </Col>
+          <Col as="li" xs="3"  md="2" lg="2" className="mb-3">
+            <NavLink href="https://www.instagram.com/puzzlerdev">
+            <FontAwesomeIcon className="fa-2x" icon={faInstagram} />
             </NavLink>
-          </li>
-          <li>
-            <NavLink targetBlank href="https://www.instagram.com/puzzlerdev">
-              Instagram
+          </Col>
+          <Col as="li" xs="3"  md="2" lg="2">
+            <NavLink href="https://tiktok.com/@puzzlerdev">
+            <FontAwesomeIcon className="fa-2x" icon={faTiktok} />
             </NavLink>
-          </li>
-          <li>
-            <NavLink targetBlank href="https://tiktok.com/@puzzlerdev">
-              TikTok
+          </Col>
+          <Col as="li" xs="3"  md="2" lg="2">
+            <NavLink href="https://discord.gg/fyGx7BZ">
+              <FontAwesomeIcon className="fa-2x" icon={faDiscord} />
             </NavLink>
-          </li>
-          <li>
-            <NavLink targetBlank href="https://discord.gg/fyGx7BZ">
-              Discord
+          </Col>
+          <Col as="li" xs="3"  md="2" lg="2">
+            <NavLink href="https://t.me/puzzlerdev">
+            <FontAwesomeIcon className="fa-2x" icon={faTelegram} />
             </NavLink>
-          </li>
-          <li>
-            <NavLink targetBlank href="https://t.me/puzzlerdev">
-              Telegram
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              targetBlank
-              href="https://www.youtube.com/channel/UCMsGIPLBFLGC2kuh-8QIA2Q"
-            >
-              YouTube
-            </NavLink>
-          </li>
-        </ul>
-      </div>
+          </Col>
+        </Row>
+      </Col>
     </footer>
   );
 };

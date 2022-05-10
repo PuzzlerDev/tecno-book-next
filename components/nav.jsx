@@ -24,7 +24,7 @@ const Nav = () => {
           </Col>
         </Row>
       </Col>
-      <Col xs="auto" className="mt-3">
+      <Col xs="auto" className={`mt-3 ${Styles["nav-col-search"]}`}>
         <InputGroup className="mb-3">
           <Button variant="dark" id="button-addon1">
             Search
@@ -32,6 +32,7 @@ const Nav = () => {
           <FormControl
             aria-label="Example text with button addon"
             aria-describedby="basic-addon1"
+            placeholder="Buscar Libro..."
           />
         </InputGroup>
       </Col>

@@ -1,4 +1,5 @@
 import { CategoryCover, CategoryBooks } from "../../components/category-page";
+import { API_URL } from "../../helpers/constants";
 
 const Category = ({ category }) => {
   return category?.id ? (
@@ -10,7 +11,7 @@ const Category = ({ category }) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/categories/`);
+  const res = await fetch(`${API_URL}/categories/`);
   const data = await res.json();
   const paths = data.map(category => {
     return {
@@ -26,7 +27,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({ params }) => {
   // Fetch data from external API
-  const res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT_ENV_VARIABLE}/categories/${params.id}`);
+  const res = await fetch(`${API_URL}/categories/${params.id}`);
   const category = await res.json();
 
   // Pass data to the page via props
