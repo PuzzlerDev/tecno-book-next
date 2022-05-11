@@ -13,11 +13,11 @@ const Search = () => {
   const handleShowResults = async () => {
     if (!inputRef.current.value) return;
     const value = inputRef.current.value;
-    const res = await fetch(`${API_URL}/books?bookTitle_containss=${value}`);
+    const res = await fetch(`${API_URL}/books?bookTitle_contains=${value}`);
     const books = await res.json();
-    setData(books); 
+    setData(books);
     setShow(true);
-  }
+  };
 
   return (
     <InputGroup className="mb-3">
@@ -29,33 +29,33 @@ const Search = () => {
         aria-describedby="Search-book"
         placeholder="Buscar Libro..."
         ref={inputRef}
+        onKeyPress={(e) => e.key === "Enter" && handleShowResults()}
       />
       <SearchModal show={show} setShow={setShow} totalBooks={data.length}>
-      <div className="row">
+        <div className="row">
           {data.map((book) => {
             const { id, bookTitle, bookInfo, bookLink, bookAuthor } = book;
             return (
-              <div key={id} className={`${Styles['book-card']} card col-12 col-md-6 col-lg-4 col-xxl-2 mx-auto`}>
-                  <div className="card-body mx-auto px-2">
-                    <h3 className="text-center">{bookTitle}</h3>
-                    <p className="card-text mb-3">
-                      {bookInfo}
-                    </p>
-                    <p>
-                      {bookAuthor}
-                    </p>
-                    <div className="d-flex justify-content-end">
-                      <NavLink 
-                        href={bookLink} 
-                        bg="green" 
-                        cta 
-                        target="_blank" 
-                        className={Styles['book-link']}
-                      >
-                        Descargar
-                      </NavLink>
-                    </div>
+              <div
+                key={id}
+                className={`${Styles["book-card"]} card col-12 col-md-6 col-lg-4 col-xxl-2 mx-auto`}
+              >
+                <div className="card-body mx-auto px-2">
+                  <h3 className="text-center">{bookTitle}</h3>
+                  <p className="card-text mb-3">{bookInfo}</p>
+                  <p>{bookAuthor}</p>
+                  <div className="d-flex justify-content-end">
+                    <NavLink
+                      href={bookLink}
+                      bg="green"
+                      cta
+                      target="_blank"
+                      className={Styles["book-link"]}
+                    >
+                      Descargar
+                    </NavLink>
                   </div>
+                </div>
               </div>
             );
           })}
