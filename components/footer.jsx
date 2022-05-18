@@ -1,6 +1,5 @@
 import StyledImage from "./styled-image";
 import NavLink from "./nav-link";
-import "../styles/components/footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub, faInstagram, faTelegram, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { Col, Row } from "react-bootstrap";

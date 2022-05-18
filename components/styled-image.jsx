@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { DOMAIN_URL } from "../helpers/constants"
 
 const Loader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;

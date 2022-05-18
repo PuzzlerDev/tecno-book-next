@@ -1,5 +1,6 @@
 import { CategoryCover, CategoryBooks } from "../../components/category-page";
 import { API_URL } from "../../helpers/constants";
+import Loading from "../../components/loading";
 
 const Category = ({ category }) => {
   return category?.id ? (
@@ -7,7 +8,7 @@ const Category = ({ category }) => {
       <CategoryCover category={category} />
       <CategoryBooks books={category.books} />
     </>
-  ) : null;
+  ) : <Loading/>;
 };
 
 export async function getStaticPaths() {

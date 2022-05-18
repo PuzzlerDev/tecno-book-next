@@ -1,40 +1,32 @@
 import NavLink from "../nav-link";
 import Styles from "../../styles/category-styles/category-books.module.css";
+import Loading from "../loading";
+import {Card, Button} from "react-bootstrap";
+import StyledImage from "../styled-image";
 
 const CategoryBooks = ({ books }) => {
-  return books ? (
+  return books.length ? (
     <section className="container pb-5">
         <div className="row">
           {books.map((book) => {
-            const { id, bookTitle, bookInfo, bookLink, bookAuthor } = book;
+            const { id, bookTitle, bookInfo, bookLink, bookAuthor, bookPicture } = book;
             return (
-              <div key={id} className={`${Styles['book-card']} card col-12 col-md-6 col-lg-4 mx-auto`}>
-                  <div className="card-body mx-auto px-2">
-                    <h3 className="text-center">{bookTitle}</h3>
-                    <p className="card-text mb-3">
-                      {bookInfo}
-                    </p>
-                    <p>
-                      {bookAuthor}
-                    </p>
-                    <div className="d-flex justify-content-end">
-                      <NavLink 
-                        href={bookLink} 
-                        bg="green" 
-                        cta 
-                        target="_blank" 
-                        className={Styles['book-link']}
-                      >
-                        Descargar
-                      </NavLink>
-                    </div>
-                  </div>
-              </div>
+              <Card key={id} className="col-12 col-md-6 col-lg-4 col-xl-3 mx-auto">
+                <StyledImage src={bookPicture.url} height={500} width={400}/>
+                <Card.Body>
+                  <Card.Title className="text-center">{bookTitle}</Card.Title>
+                  <Card.Text className="text-end mt-4 mb-4">
+                    Autor/a: {bookAuthor}
+                  </Card.Text>
+                  <hr/>
+                  <Button variant="secondary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
             );
           })}
         </div>
     </section>
-  ) : null;
+  ) : <Loading/>;
 };
 
 export default CategoryBooks;
